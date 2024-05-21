@@ -21,14 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang='en'>
-      <body className={inter.className}>
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        {children}
-      </body>
-    </html>
-  </ClerkProvider>
+      <html lang='en'>
+        <body className={inter.className}>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate": "drizzle-kit generate; supabase db push"
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx ./scripts/migrate.ts",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@clerk/backend": "^1.2.0",
@@ -15,6 +17,7 @@
     "@hono/clerk-auth": "^2.0.0",
     "@hono/zod-validator": "^0.2.1",
     "@hookform/resolvers": "^3.4.2",
+    "@neondatabase/serverless": "^0.9.3",
     "@paralleldrive/cuid2": "^2.2.2",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
@@ -35,7 +38,6 @@
     "react-hook-form": "^7.51.5",
     "react-use": "^17.5.0",
     "sonner": "^1.4.41",
-    "supabase": "^1.167.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8",
@@ -48,6 +50,7 @@
     "drizzle-kit": "^0.21.4",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.3",
+    "pg": "^8.11.5",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"

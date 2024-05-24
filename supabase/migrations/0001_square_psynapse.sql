@@ -1,1 +1,0 @@
-ALTER TABLE "accounts" ALTER COLUMN "user_id" SET DEFAULT requesting_user_id();

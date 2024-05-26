@@ -42,7 +42,7 @@ export default function AccountForm({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4 pt-4">
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4 mt-4">
         
         <FormField 
           name="name"
@@ -63,17 +63,19 @@ export default function AccountForm({
           )}
         />
 
-        <Button className="w-full" disabled={disabled}>
-          {id ? "Save changes" : "Create account"}
-        </Button>
-        
-        { !!id && (
-          <Button type="button" disabled={disabled} onClick={handleDelete} variant="outline" className="w-full">
-            <Trash className="size-4 mr-2">
-              Delete account
-            </Trash>
-          </Button> 
-        )}
+        <div className="mt-4">
+          <Button className="w-full" disabled={disabled}>
+            {id ? "Save changes" : "Create account"}
+          </Button>
+          
+          { !!id && (
+            <Button type="button" disabled={disabled} onClick={handleDelete} variant="outline" className="w-full">
+              <Trash className="size-4 mr-2">
+                Delete account
+              </Trash>
+            </Button> 
+          )}
+        </div>
 
       </form>
     </Form>

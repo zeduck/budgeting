@@ -26,7 +26,7 @@ export default function NewAccountSheet() {
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent className="shpace-y-4">
+      <SheetContent className="space-y-4">
         <SheetHeader>
           
           <SheetTitle>
@@ -38,7 +38,7 @@ export default function NewAccountSheet() {
           </SheetDescription>
 
         </SheetHeader>
-
+      
         <AccountForm 
           onSubmit={onSubmit} 
           disabled={mutation.isPending} 

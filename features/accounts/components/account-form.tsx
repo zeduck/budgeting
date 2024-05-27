@@ -63,16 +63,15 @@ export default function AccountForm({
           )}
         />
 
-        <div className="mt-4">
-          <Button className="w-full" disabled={disabled}>
+        <div>
+          <Button className="w-full mt-4" disabled={disabled}>
             {id ? "Save changes" : "Create account"}
           </Button>
           
           { !!id && (
-            <Button type="button" disabled={disabled} onClick={handleDelete} variant="outline" className="w-full">
-              <Trash className="size-4 mr-2">
+            <Button type="button" disabled={disabled} onClick={handleDelete} variant="outline" className="w-full mt-4">
+              <Trash className="size-4 mr-2" />
                 Delete account
-              </Trash>
             </Button> 
           )}
         </div>

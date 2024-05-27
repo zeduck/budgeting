@@ -44,7 +44,7 @@ export function useConfirm(
 
           <Button
             onClick={handleConfirm}
-            variant="outline"
+            variant="default"
           >
             Confirm
           </Button>

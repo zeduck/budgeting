@@ -12,21 +12,22 @@ const app = new Hono()
     '/', 
     clerkMiddleware(), 
     async (c) => {
-    const auth = getAuth(c);
-    if (!auth?.userId) {
-      return c.json( {error: 'Unauthorized'}, 401);
+      const auth = getAuth(c);
+      if (!auth?.userId) {
+        return c.json( {error: 'Unauthorized'}, 401);
+      }
+      
+      const data = await db
+        .select({
+          id: categories.id,
+          name: categories.name,
+        })
+        .from(categories)
+        .where(eq(categories.userId, auth.userId));
+      
+      return c.json({ data });
     }
-    
-    const data = await db
-      .select({
-        id: categories.id,
-        name: categories.name,
-      })
-      .from(categories)
-      .where(eq(categories.userId, auth.userId));
-    
-    return c.json({ data });
-  })
+  )
   .get(
     '/:id',
     zValidator('param', z.object({

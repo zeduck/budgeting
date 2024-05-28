@@ -15,6 +15,13 @@
       "when": 1716855624090,
       "tag": "0001_remarkable_leper_queen",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1716924239223,
+      "tag": "0002_lethal_white_queen",
+      "breakpoints": true
     }
   ]
 }

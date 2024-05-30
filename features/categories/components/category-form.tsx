@@ -22,7 +22,7 @@ export default function CategoryForm({
 }: {
   id?: string;
   defaultValues?: FormValues;
-  onSubmit: (vallues: FormValues) => void;
+  onSubmit: (values: FormValues) => void;
   onDelete?: () => void;
   disabled?: boolean;
 }) {

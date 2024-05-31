@@ -9,8 +9,35 @@ import { DataTable } from "@/components/ui/data-table";
 import { useGetTransactions } from "@/features/transactions/api/use-get-transactions";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useBulkDeleteTransactions } from "@/features/transactions/api/use-bulk-delete-transactions";
+import { useState } from "react";
+import UploadButton from "./upload-button";
+import ImportCard from "./import-card";
+
+enum VARIANTS {
+  LIST = "LIST",
+  IMPORT = "IMPORT",
+};
+
+const INITIAL_IMPORT_RESULTS = {
+  data: [],
+  errors: [],
+  meta: {},
+};
 
 export default function TransactionsPage() {
+  const [variant, setVariant ] = useState<VARIANTS>(VARIANTS.LIST);
+  const [importResults, setImportResults] = useState(INITIAL_IMPORT_RESULTS);
+
+  const onUpload = (results: typeof INITIAL_IMPORT_RESULTS) => {
+    setVariant(VARIANTS.IMPORT);
+    setImportResults(results);
+  };
+
+  const onCancelImport = () => {
+    setVariant(VARIANTS.LIST);
+    setImportResults(INITIAL_IMPORT_RESULTS);
+  }
+
   const newTransaction = useNewTransaction();
   const deleteTransactions = useBulkDeleteTransactions();
   const transactionsQuery = useGetTransactions();
@@ -32,6 +59,14 @@ export default function TransactionsPage() {
       </Card>
     </div>
   )
+
+  if (variant === VARIANTS.IMPORT) {
+    return (
+      <>
+        <ImportCard />
+      </>
+    )
+  }
   
   return (
     <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-24">
@@ -39,13 +74,17 @@ export default function TransactionsPage() {
         
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
           <CardTitle className="text-xl line-clamp-1">
-            Transactions Page
+            Transactions History
           </CardTitle>
           
-          <Button size="sm" onClick={newTransaction.onOpen}>
-            <Plus className="size-4 mr-2"/>
-            Add new
-          </Button>
+          <div className="flex items-center gap-x-2">
+            <Button size="sm" onClick={newTransaction.onOpen}>
+              <Plus className="size-4 mr-2"/>
+              Add new
+            </Button>
+
+            <UploadButton onUpload={onUpload}/>
+          </div>
         </CardHeader>
 
         <CardContent>

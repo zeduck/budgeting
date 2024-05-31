@@ -77,11 +77,11 @@ export default function EditCategorySheet() {
             </div>
           ) : (
             <CategoryForm 
-            id={id}
-            onSubmit={onSubmit} 
-            disabled={isPending} 
-            defaultValues={defaultValues}
-            onDelete={onDelete}
+              id={id}
+              onSubmit={onSubmit} 
+              disabled={isPending} 
+              defaultValues={defaultValues}
+              onDelete={onDelete}
             />
           ) }
           

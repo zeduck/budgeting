@@ -20,7 +20,7 @@ export default function LineVariant({
           tickLine={false}
           dataKey='date'
           tickFormatter={(value) => format(value, 'dd MMM')}
-          style={{ fontSize: '12px' }}
+          style={{ fontSize: '12px', color: 'white' }}
           tickMargin={16}
         />
         <Tooltip content={<CustomTooltip />} />

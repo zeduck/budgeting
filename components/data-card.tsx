@@ -58,14 +58,14 @@ export default function DataCard ({
   percentageChange = 0,
 }: DataCardProps) {
   return (
-    <Card className="border-none drop-shadow-sm">
-      <CardHeader className="flex flex-row items-center justify-between gap-x-4">
+    <Card className="border-none drop-shadow-sm bg-black text-white">
+      <CardHeader className="flex flex-row items-center justify-between gap-x-4 ">
         <div className="space-y-2">
           <CardTitle className="text-2xl line-clamp-1">
             {title}
           </CardTitle>
           
-          <CardDescription className="line-clamp-1">
+          <CardDescription className="line-clamp-1 text-gray-300">
             {dateRange}
           </CardDescription>
         </div>
@@ -86,8 +86,8 @@ export default function DataCard ({
         </h1>
         <p className={cn(
           'text-muted-foreground text-sm line-clamp-1',
-          percentageChange > 0 && "text-emerald-500",
-          percentageChange < 0 && "text-rose-500",
+          percentageChange > 0 && "text-emerald-300",
+          percentageChange < 0 && "text-rose-300",
         )}>
           {formatPercentage(percentageChange, { addPrefix: true })} from last period
         </p>
@@ -98,7 +98,7 @@ export default function DataCard ({
 
 export function DataCardLoading() {
   return(
-    <Card className="border-none drop-shadow-sm h-[192px]">
+    <Card className="border-none drop-shadow-sm h-[192px] bg-black text-white">
       <CardHeader className="flex flex-row items-center justify-between gap-x-4">
         <div className="space-y-2">
           <Skeleton className="h-6 w-24" />

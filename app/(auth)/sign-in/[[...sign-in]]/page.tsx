@@ -12,7 +12,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="text-center space-y4 pt-16">
+      <div className="text-center space-y4 pt-8">
         <h1 className="font-bold text-3xl text-[#2E2A47]">
           Welcome Back!
         </h1>

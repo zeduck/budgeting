@@ -10,7 +10,7 @@ export default function Page() {
         <Image src="logo.svg" height={100} width={100} alt="Logo"/>
       </div>
 
-      <div className="text-center space-y4 pt-16">
+      <div className="text-center space-y4 pt-8">
         <h1 className="font-bold text-3xl text-[#2E2A47]">
           Welcome Back!
         </h1>

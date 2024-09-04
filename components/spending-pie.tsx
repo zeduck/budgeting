@@ -82,7 +82,7 @@ export default function SpendingPie({
 
 export function SpendingPieLoading() {
   return(
-    <Card className="border-none drop-shadow-sm">
+    <Card className="border-none drop-shadow-sm bg-gray-900">
       <CardHeader className="flex space-y-2 lg:space-y-0 lg:flex-row lg:items-center justify-between">
         <Skeleton className="h-8 w-48" />
         <Skeleton className="h-8 lg:w-[120px] w-full" />

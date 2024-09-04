@@ -27,8 +27,8 @@ export default function DatePicker({
             !value && "text-muted-foreground",
           )}
         >
-          <CalendarIcon className='size-4 mr-2' />
-          {value ? format(value, "PPP") : <span>Pick a date</span>}
+          <CalendarIcon className='size-4 mr-2 text-white' />
+          {value ? format(value, "PPP") : <span className='text-white'>Pick a date</span>}
         </Button>
       </PopoverTrigger>
 

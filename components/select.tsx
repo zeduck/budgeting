@@ -40,6 +40,7 @@ export default function Select({
           ":hover": {
             borderColor: "#e2e8f0"
           },
+          "background": "#111827",
         }),
       }}
       value={formattedValue}

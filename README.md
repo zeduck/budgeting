@@ -1,5 +1,5 @@
-https://finance-organize.vercel.app/
+# Finance and budgeting app
 
-![finance demo 1](./public/finance-demo-1.png)
-![finance demo 2](./public/finance-demo-2.png)
-![finance demo 3](./public/finance-demo-3.png)
+Track transactions, income, and expenses.
+
+https://finance-organize.vercel.app/

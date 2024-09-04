@@ -7,12 +7,12 @@ export default function WelcomeMsg() {
 
   return (
     <div className="space-y-2 mb-4">
-      <h2 className="text-2xl lg:text-4xl text-white font-medium">
-        Hi { user?.firstName }
+      <h2 className="text-xl lg:text-2xl text-white font-medium">
+        { user?.firstName }{ isLoaded? "'s" : "" } Financial Dashboard
       </h2>
-      <p className="text-sm lg:text-base text-[#89b6fd]">
-        Your Financial Overview Report
-      </p>
+      {/* <p className="text-sm lg:text-base text-[#89b6fd]">
+        
+      </p> */}
     </div>
   )
 }

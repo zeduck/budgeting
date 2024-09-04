@@ -21,6 +21,7 @@ export default function BarVariant({
           dataKey='date'
           tickFormatter={(value) => format(value, 'dd MMM')}
           style={{ fontSize: '12px' }}
+          stroke="white"
           tickMargin={16}
         />
         <Tooltip content={<CustomTooltip />} />

@@ -58,7 +58,7 @@ export default function DataCard ({
   percentageChange = 0,
 }: DataCardProps) {
   return (
-    <Card className="border-none drop-shadow-sm bg-black text-white">
+    <Card className="border-none drop-shadow-sm bg-gray-900 text-white">
       <CardHeader className="flex flex-row items-center justify-between gap-x-4 ">
         <div className="space-y-2">
           <CardTitle className="text-2xl line-clamp-1">
@@ -98,7 +98,7 @@ export default function DataCard ({
 
 export function DataCardLoading() {
   return(
-    <Card className="border-none drop-shadow-sm h-[192px] bg-black text-white">
+    <Card className="border-none drop-shadow-sm h-[192px] bg-gray-900 text-white">
       <CardHeader className="flex flex-row items-center justify-between gap-x-4">
         <div className="space-y-2">
           <Skeleton className="h-6 w-24" />

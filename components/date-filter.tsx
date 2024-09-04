@@ -73,7 +73,7 @@ export default function DateFilter() {
           onSelect={setDate}
           numberOfMonths={2}
         />
-        <div className='p-4 w-full flex items-center gap-x-2'>
+        <div className='p-4 w-full flex items-center gap-x-2 bg-black'>
           <PopoverClose asChild>
             <Button
               onClick={onReset}

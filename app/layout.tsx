@@ -5,6 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { QueryProvider } from "@/providers/query-provider";
 import { SheetProvider } from "@/providers/sheet-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { dark } from '@clerk/themes'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang='en'>
+    <ClerkProvider appearance={{baseTheme: dark}}>
+      <html lang='en' className="bg-black">
         <body className={inter.className}>
           <QueryProvider>
             <SheetProvider />

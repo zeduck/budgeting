@@ -21,7 +21,7 @@ export default function SpendingPie({
   };
 
   return (
-    <Card className="border-none drop-shadow-sm">
+    <Card className="border-none drop-shadow-sm bg-gray-900 text-white">
       <CardHeader className="flex space-y-2 lg:space-y-0 lg:flex-row lg:items-center justify-between">
         <CardTitle className="text-xl line-clamp-1">
           Categories
@@ -30,7 +30,7 @@ export default function SpendingPie({
           defaultValue={chartType}
           onValueChange={onTypeChange}
         >
-          <SelectTrigger className="lg:w-auto h-9 rounded-md px-3">
+          <SelectTrigger className="lg:w-auto h-9 rounded-md px-3 bg-gray-900">
             <SelectValue placeholder="Chart type" />
           </SelectTrigger>
           
@@ -63,8 +63,8 @@ export default function SpendingPie({
       <CardContent>
         {data.length === 0 ? (
           <div className="flex flex-col gap-y-4 items-center jusitfy-center h-[350px] w-full">
-            <FileSearch className="size-6 text-muted-foreground" />
-            <p className="text-muted-foreground text-sm">
+            <FileSearch className="size-6" />
+            <p className="text-sm">
               No data for this period
             </p>
           </div> 

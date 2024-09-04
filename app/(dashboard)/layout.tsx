@@ -9,7 +9,7 @@ export default function DashboardLayout({
   return (
     <>
       <Header/>
-      <main className="px-3 lg:px-4">
+      <main className="px-3 lg:px-4 bg-black">
         {children}
       </main>
     </>

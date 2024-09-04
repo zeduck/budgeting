@@ -31,6 +31,7 @@ export default function AreaVariant({
           dataKey='date'
           tickFormatter={(value) => format(value, 'dd MMM')}
           style={{ fontSize: '12px' }}
+          stroke='white'
           tickMargin={16}
         />
         <Tooltip content={<CustomTooltip />} />

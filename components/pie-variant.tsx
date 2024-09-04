@@ -32,7 +32,7 @@ export default function PieVariant({
                     style={{ backgroundColor: entry.color }}
                   />
                   <div className="space-x-1">
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-sm">
                       {entry.value}
                     </span>
 

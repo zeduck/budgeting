@@ -1,4 +1,4 @@
-# Finance and budgeting app
+# Finance and Budgeting App
 
 Track transactions, income, and expenses.
 

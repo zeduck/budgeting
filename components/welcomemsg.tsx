@@ -8,7 +8,7 @@ export default function WelcomeMsg() {
   return (
     <div className="space-y-2 mb-4">
       <h2 className="text-xl lg:text-2xl text-white font-medium">
-        { user?.firstName }{ isLoaded? "'s" : "" } Financial Dashboard
+        { user?.firstName }{ isLoaded? "'s" : "" } Budgeting Dashboard
       </h2>
       {/* <p className="text-sm lg:text-base text-[#89b6fd]">
         

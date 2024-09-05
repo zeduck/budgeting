@@ -2,4 +2,4 @@
 
 Track transactions, income, and expenses.
 
-https://finance-organize.vercel.app/
+https://budgeting-organize.vercel.app/
